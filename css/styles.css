@@ -31,9 +31,20 @@ img {
   height: auto;
 }
 .container {
-  width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 .section {
   padding-top: 120px;
@@ -65,8 +76,9 @@ img {
   max-width: 264px;
   margin-top: 8px;
 }
-/* ----------------------------------------------------------------------------------------------- */
+/* -----------------------------GLOBAL STYLES---------------------------- */
 /* ----------------------------HEADER SECTION---------------------------- */
+/* ==========================mob adaptation========================== */
 .header-border {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -75,6 +87,7 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .navigation {
   display: flex;
@@ -88,53 +101,27 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 17px 0;
 }
 .logo-black {
   color: #2e2f42;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-list {
-  gap: 40px;
-  display: flex;
+  display: none;
 }
-.navigation-list-item {
-  color: #404bbf;
-  position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  display: block;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address {
-  font-style: normal;
-  margin-left: auto;
-}
+
 .address-list {
-  gap: 40px;
-  display: flex;
+  display: none;
 }
-.address-list-item {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation-list-item::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
+
+.burger {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 }
 .logo-blue:hover {
   color: #404bbf;
@@ -142,15 +129,88 @@ img {
 .logo-black:hover {
   color: #404bbf;
 }
-.navigation-list-item:hover,
-.navigation-list-item:focus {
-  color: #404bbf;
+/* ==========================tab adaptation========================== */
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .logo-blue {
+    margin-right: 120px;
+  }
+
+  .navigation-list {
+    display: flex;
+    gap: 40px;
+  }
+  .navigation-list-item {
+    color: #2e2f42;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: block;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation-list-item:hover,
+  .navigation-list-item:focus {
+    color: #404bbf;
+  }
+  .current {
+    color: #404bbf;
+    position: relative;
+  }
+  .current::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .address {
+    font-style: normal;
+    margin-left: auto;
+    display: block;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .address-list-item {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .address-list-item:hover,
+  .address-list-item:focus {
+    color: #404bbf;
+  }
 }
-.address-list-item:hover,
-.address-list-item:focus {
-  color: #404bbf;
+/* ==========================desktop adaptation========================== */
+@media screen and (min-width: 1158px) {
+  .logo-blue {
+    margin-right: 76px;
+  }
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .address-list-item {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
-/* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------HEADER SECTION---------------------------- */
 /* ----------------------------BUTTON SECTION---------------------------- */
 .solutions {
   background-color: #2e2f42;
