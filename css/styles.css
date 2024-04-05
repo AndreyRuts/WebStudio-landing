@@ -294,7 +294,7 @@ img {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/desk-img/bg/hero-bg-desk-x1.jpg");
-    max-width: 1140px;
+    max-width: 1440px;
     padding: 112px 0 112px;
   }
   .solutions-header {
@@ -319,7 +319,7 @@ img {
 .features-list {
   display: flex;
   gap: 72px;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .features-icon-container {
@@ -358,22 +358,55 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  max-width: 288px;
+  max-width: 100%;
 }
 
 /* ==========================tab adaptation========================== */
 @media screen and (min-width: 768px) {
   .features-list {
-    display: flex;
-    flex-direction: row;
     gap: 24px;
   }
   .features-list-item {
-    width: calc((100% - 2 * 24px) / 3);
+    width: calc((100% - 24px) / 2);
+  }
+  .features-list-header {
+    text-align: left;
   }
 }
 /* ==========================desktop adaptation========================== */
 @media screen and (min-width: 1158px) {
+  .features-list {
+    flex-wrap: nowrap;
+  }
+  .features-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4fd;
+    max-width: 264px;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .features-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  .features-list-header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .features-list-text {
+    display: block;
+    font-weight: 400;
+  }
 }
 /* ---------------------------FEATURES SECTION---------------------------- */
 /* -----------------------------TEAM SECTION----------------------------- */
@@ -383,11 +416,13 @@ img {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
+  justify-content: center;
 }
 .team-list-card {
   background: #ffffff;
-  width: calc((100% - 3 * 24px) / 4);
+  /* width: calc((100% - 3 * 24px) / 4); */
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -440,6 +475,22 @@ img {
 .team-icon-list-item-link:focus {
   background-color: #404bbf;
 }
+
+/* ==========================tab adaptation========================== */
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    gap: 72px;
+    column-gap: 24px;
+    justify-content: center;
+  }
+}
+/* ==========================desktop adaptation========================== */
+@media screen and (min-width: 1158px) {
+}
+
 /* -----------------------------TEAM SECTION----------------------------- */
 /* ---------------------------PORTFOLIO SECTION---------------------------- */
 .portfolio-list {
