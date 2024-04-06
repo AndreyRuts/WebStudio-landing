@@ -28,7 +28,7 @@ a {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 .container {
   max-width: 320px;
@@ -504,12 +504,24 @@ img {
 }
 .portfolio-item-box {
   position: relative;
-  /* width: 100%; */
-  /* width: 288px;
-  height: 280px; */
+  width: 288px;
+  height: 280px;
   margin: 0 auto;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) {
+  .portfolio-item-box {
+    width: 356px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .portfolio-item-box {
+    width: 360px;
+    height: 300px;
+  }
+}
+
 .portfolio-overlay {
   position: absolute;
   top: 0;
