@@ -504,8 +504,9 @@ img {
 }
 .portfolio-item-box {
   position: relative;
-  width: 360px;
-  height: 300px;
+  /* width: 100%; */
+  /* width: 288px;
+  height: 280px; */
   margin: 0 auto;
   overflow: hidden;
 }
