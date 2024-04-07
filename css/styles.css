@@ -569,28 +569,39 @@ img {
 /* ----------------------------FOOTER SECTION---------------------------- */
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   display: block;
   align-items: left;
 }
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  /* align-items: baseline; */
 }
 .footer-logo-text-container {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  margin: 0 auto;
 }
 .logo-footer-blue {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
   display: inline-block;
-  margin-bottom: 16px;
+  padding-left: 102px;
+  padding-right: 102px;
+  /* display: block; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  /* flex-direction: row; */
+
+  /* margin-bottom: 16px; */
+  /* margin-left: 102px; */
 }
 .logo-footer-white {
   color: #f4f4fd;
@@ -601,18 +612,22 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   margin-top: 16px;
+  margin-bottom: 72px;
   max-width: 264px;
 }
-/* .footer-media-icon-container {
-} */
+.footer-media-icon-container {
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
 .footer-sub-text {
-  display: inline;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-social-icon-list {
   display: flex;
@@ -808,7 +823,9 @@ img {
 }
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 .footer-input {
   width: 264px;
@@ -845,6 +862,110 @@ img {
 }
 .footer-subscribe-icon {
   margin-left: 16px;
+  fill: #fff;
+}
+.footer-form-container {
+  /* margin-left: 80px; */
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+/* ==========================tab adaptation========================== */
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    padding-right: 108px;
+    /* align-items: baseline; */
+  }
+  .footer-logo-text-container {
+    /* margin-right: 120px; */
+    margin-right: 24px;
+    margin-left: 0;
+  }
+  .logo-footer-blue {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+
+    /* display: block; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    /* flex-direction: row; */
+
+    /* margin-bottom: 16px; */
+    /* margin-left: 102px; */
+  }
+  .footer-media-icon-container {
+    margin: 0;
+    margin-bottom: 72px;
+  }
+  .footer-sub-text {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .footer-form-container {
+    /* margin-left: 80px; */
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-form-subtitle {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-align: left;
+  }
+}
+/* ==========================desktop adaptation========================== */
+@media screen and (min-width: 1158px) {
+  .footer {
+    background-color: #2e2f42;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 0;
+    /* align-items: baseline; */
+  }
+  .footer-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    margin-top: 16px;
+    margin-bottom: 0;
+    max-width: 264px;
+  }
+  .footer-logo-text-container {
+    margin-right: 120px;
+  }
+  .footer-media-icon-container {
+    margin: 0;
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }
 /* =========================================================== */
 .form-exit-decor:hover {
