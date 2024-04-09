@@ -663,6 +663,7 @@ img {
   justify-content: space-between;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .mob-menu-button {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -726,6 +727,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 40px;
 }
 .mob-menu-social-icon-list-item {
   width: 40px;
@@ -744,10 +746,7 @@ img {
 .mob-menu-social-icon {
   fill: #f4f4fd;
 }
-.mob-menu-is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
+
 /* ==========================768 BreakPoint========================== */
 @media screen and (min-width: 768px) {
   /* --------------------------header sectoin */
@@ -953,7 +952,7 @@ img {
       ),
       url("../images/desk-img/bg/hero-bg-desk-x1.jpg");
     max-width: 1440px;
-    padding: 112px 0 112px;
+    padding: 188px 0 188px;
   }
   .solutions-header {
     margin-bottom: 48px;
